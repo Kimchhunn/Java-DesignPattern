@@ -7,7 +7,7 @@ public class UniversityFactoryPattern {
         Scanner s = new Scanner(System.in);
         System.out.println("Select school to be enrolled \n1. KIT \n2. Zamann \n3. RUPP");
         int sch = s.nextInt();
-        String sch_enr = "";
+        String sch_enr;
         switch (sch) {
             case 1:
                 sch_enr = "KIT";
@@ -19,9 +19,9 @@ public class UniversityFactoryPattern {
                 sch_enr = "RUPP";
                 break;
             default:
-                sch_enr = null;
+                sch_enr = "";
         }
-        if (sch_enr.equals(null)) {
+        if (sch_enr.equals("")) {
             System.out.println("Invalid University");
         }
         else {
